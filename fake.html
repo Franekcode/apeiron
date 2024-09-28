@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Store API Demo</title>
+</head>
+<body>
+    <h1>Fake Store API Products</h1>
+    <pre id="output"></pre>
+
+    <script>
+        fetch('https://fakestoreapi.com/products')
+            .then(res => res.json())
+            .then(json => {
+                document.getElementById('output').textContent = JSON.stringify(json, null, 2);
+                console.log(json);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('output').textContent = 'Error fetching data. Check the console for details.';
+            });
+    </script>
+</body>
+</html>
