@@ -1,10 +1,9 @@
 # apeiron
 hackathon project
 lol
-this is readme
+this is read
 
-System Architecture:
-
+```mermaid
 graph TD
     A[User] -->|Provides URL| B[Web Scraper]
     B -->|Extracts Data| C[Product Catalog Database]
